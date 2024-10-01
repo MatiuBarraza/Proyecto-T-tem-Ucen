@@ -1,0 +1,18 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5; /* Fondo gris claro */
+}
+
+.app {
+  width: 600px; /* Ancho fijo */
+  height: 80%; /* Altura relativa */
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Evitar bordes */
+  margin-top: 60px; /* Para que el contenido no esté detrás del header */
+}

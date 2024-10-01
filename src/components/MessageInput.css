@@ -1,0 +1,18 @@
+.message-input {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.message-input input {
+    width: 80%;
+    padding: 5px;
+}
+
+.message-input button {
+    background-color: #C8102E; /* Rojo */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
