@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot Universitario</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vinculación del archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chatbox">
+        <h4 class="text-center mb-4">ChatBot Universitario</h4>
+        <div class="messages" id="chat-messages">
+            <!-- Aquí aparecerán los mensajes -->
+        </div>
+        <div class="input-box">
+            <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí..." />
+            <button class="btn btn-primary" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Axios JS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Vinculación del archivo JS -->
+    <script src="script.js"></script>
+</body>
+</html>
