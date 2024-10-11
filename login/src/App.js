@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+// src/index.js o src/App.js
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // src/App.js
 import React from 'react';
