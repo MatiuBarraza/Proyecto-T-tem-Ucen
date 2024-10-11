@@ -21,6 +21,16 @@
     border: 1px solid #C8102E; /* Rojo */
 }
 
+.user {
+    background-color: #d1e7ff;
+    align-self: flex-end;
+}
+
+.bot {
+    background-color: #e0e0e0;
+    align-self: flex-start;
+}
+
 .suggestions {
     display: flex;
     flex-wrap: wrap;
