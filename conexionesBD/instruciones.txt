@@ -1,0 +1,16 @@
+crear base de datos en mysql con xamp:
+
+CREATE DATABASE universidad;
+
+USE universidad;
+
+CREATE TABLE alumnos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    rut VARCHAR(12) NOT NULL UNIQUE,
+    matricula VARCHAR(10) NOT NULL,
+    vigente BOOLEAN NOT NULL DEFAULT TRUE
+);
+
+copiar archivos de la carpeta a C:\xampp\htdocs\proyecto_totem_ucen
+
+generar datos en la BD y probar.
