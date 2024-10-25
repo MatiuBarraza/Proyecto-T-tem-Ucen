@@ -16,3 +16,19 @@ html, body, #root {
   overflow: hidden; /* Evitar bordes */
   margin-top: 60px; /* Para que el contenido no esté detrás del header */
 }
+/* App.css */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Evitar scroll */
+}
+
+#bp-webchat {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* Asegúrate de que esté por encima de otros elementos */
+}

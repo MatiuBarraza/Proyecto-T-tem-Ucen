@@ -2,9 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/login/Login';
 import MainApp from './pages/app/App';
-import Header from './components/Header';
-import ChatWindow from './components/ChatWindow';
-import MessageInput from './components/MessageInput';
 
 
 const App = () => {
