@@ -25,7 +25,7 @@ const customStyles = `
     padding: 10px;
   }
   .bpHeaderContentContainer {
-    height: 14vh;
+    height: 10vh;
   }
   .bpHeaderContentTitle {
     font-size: 1.5rem;
@@ -34,6 +34,9 @@ const customStyles = `
     text-align: center;
     color: white;
     margin: 0 auto;
+  }
+  .bpHeaderContentAvatarContainer img {
+    display: none;
   }
   .bpHeaderContentAvatarContainer img, .bpComposerButtonContainer, .bpHeaderContentActionsContainer svg:nth-child(2) {
     display: none;
@@ -58,6 +61,10 @@ const customStyles = `
     align-items: center;
     margin: 0 auto;
     cursor: pointer;
+  }
+  .bpModalDialogNewConversationButton {
+    background-color: #fe5200;
+    color: white;
   }
   .bpComposerContainer {
     border: 1px solid #0026fa;
@@ -84,7 +91,7 @@ const customStyles = `
     margin: 0.2rem;
     cursor: pointer;
   }
-  .reset-button, .logout-button {
+  .reset-button {
     background-color: #fe5200;
     color: white;
     margin: 0.2rem; 
@@ -93,6 +100,10 @@ const customStyles = `
     border-radius: 0.5rem;
     border: white 2px solid;
   }
+}
+.bpHeaderContentAvatarImage {
+    width: 100%;
+    height: 100%;
 }
 .bpHeaderContentAvatarContainer img, .bpComposerButtonContainer, .bpHeaderContentActionsContainer svg:nth-child(2) {
   display: none;
@@ -106,10 +117,7 @@ const customStyles = `
   background-image: url("https://www.ucentral.cl/triptico-dave/images/logo.png");
   background-size: cover;
   background-position: fixed;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 2.2/1;
-  border-radius: 0%;
+  margin: 0 !important;
 }
 .bpHeaderContainer {
   display: flex;
@@ -119,9 +127,10 @@ const customStyles = `
 }
 .bpHeaderContentContainer {
   height: 14vh;
+    gap: 0;
 }
 .bpHeaderContentTitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -154,14 +163,6 @@ const customStyles = `
   flex-direction: row;
   align-items: center;
 }
-.bpHeaderContentTitle {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-  margin: 0 auto;
-}
 .bpComposerContainer {
   border: 1px solid #0026fa;
   width: 90%;
@@ -193,7 +194,7 @@ const customStyles = `
 const config = {
   composerPlaceholder: '¿En qué puedo ayudarte hoy?',
   botName: 'Tótem Informativo Ucen',
-  botAvatar: 'https://files.bpcontent.cloud/2024/11/14/02/20241114022924-0EVOWYG4.jpeg',
+  botAvatar: 'https://i.imgur.com/9ETSYzU.png',
 };
 
 const clientId = 'e5b8480b-e0a4-4ddd-b4a4-f1275aa7c502';

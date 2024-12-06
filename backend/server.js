@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql');
+const bcrypt = require('bcrypt');
 
 const app = express();
 const port = 8080; // Cambia el puerto si es necesario
@@ -93,7 +94,7 @@ app.post('/validate-password', (req, res) => {
   // Buscar al administrador en la base de datos
   const query = 'SELECT * FROM administradores WHERE rut = ?';
 
-  db.query(query, [formattedRUT], (err, result) => {
+  db.query(query, [formattedRUT], async (err, result) => {
     if (err) {
       console.error('Error en la consulta: ' + err.stack);
       return res.status(500).json({ success: false, message: 'Error en la consulta a la base de datos' });
@@ -102,17 +103,20 @@ app.post('/validate-password', (req, res) => {
     if (result.length > 0) {
       const admin = result[0];
 
-      // Aquí deberías verificar la contraseña (usando hash en un entorno real)
-      if (admin.password === password) {
-        return res.json({ success: true });
-      } else {
-        return res.status(400).json({ success: false, message: 'Contraseña incorrecta' });
+      // Comparar la contraseña ingresada con el hash almacenado
+      const isMatch = await bcrypt.compare(password, admin.password);
+
+      if (!isMatch) {
+        return res.status(401).json({ error: 'Contraseña incorrecta' });
       }
+
+      return res.json({ success: true, message: 'Contraseña correcta' });
+
     } else {
       return res.status(400).json({ success: false, message: 'Administrador no encontrado' });
     }
   });
-});  
+});
   
 
 // Inicia el servidor
